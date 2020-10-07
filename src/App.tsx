@@ -1,14 +1,19 @@
 import React from 'react'
 import { render } from 'react-dom'
+import { ThemeProvider } from 'styled-components'
 
-import styled from 'styled-components'
+import './lib.css'
 
-const Appka = styled.div`
-  background: black;
-`
+import { HomePage } from './pages/home'
+import { GlobalStyle, defaultTheme } from './ui/theme'
 
 export const App = () => {
-  return <Appka>Yo!</Appka>
+  return (
+    <ThemeProvider theme={defaultTheme}>
+      <GlobalStyle />
+      <HomePage />
+    </ThemeProvider>
+  )
 }
 
 render(<App />, document.getElementById('react-app'))

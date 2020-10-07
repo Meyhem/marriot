@@ -4,9 +4,13 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "start": "parcel src/index.html"
+    "start": "parcel src/index.html",
+    "clean": "shx rm -rf ./.cache ./dist",
+    "mrproper": "yarn run clean && shx rm -rf node_modules"
   },
   "dependencies": {
+    "@ant-design/icons": "^4.2.2",
+    "antd": "^4.6.6",
     "babel-preset-env": "^1.7.0",
     "babel-preset-react": "^6.24.1",
     "react": "^16.13.1",
@@ -21,6 +25,7 @@
     "@types/styled-system": "^5.1.10",
     "babel-core": "^6.26.3",
     "parcel-bundler": "^1.12.4",
+    "shx": "^0.3.2",
     "typescript": "^4.0.3"
   }
 }
