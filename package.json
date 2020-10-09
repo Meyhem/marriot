@@ -5,8 +5,8 @@
   "license": "MIT",
   "scripts": {
     "start": "parcel src/index.html",
-    "build": "parcel build src/index.html --public-url https://meyhem.github.io/marriot",
-    "release-gh": "shx mkdir -p ./docs && shx cp ./dist/* ./docs",
+    "build": "parcel build src/index.html --public-url https://meyhem.github.io/marriot/docs",
+    "release-gh": "yarn run build && shx mkdir -p ./docs && shx cp ./dist/* ./docs",
     "clean": "shx rm -rf ./.cache ./dist",
     "mrproper": "yarn run clean && shx rm -rf node_modules"
   },
