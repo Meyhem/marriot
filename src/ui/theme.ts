@@ -35,12 +35,12 @@ export type Breakpoints = 0 | 1 | 2
 
 export const defaultTheme: MarriotTheme = {
   colors: {
-    primary: '#003c7d',
+    primary: '#0557b0;',
     secondary: '#fec74a',
 
     info: '#17a2b8',
     success: '#28a745',
-    warning: '#ff7400',
+    warning: '#f08905',
     danger: '#dc3545',
 
     bgPrimary: '#f9f9f9',
@@ -67,7 +67,7 @@ export const defaultTheme: MarriotTheme = {
 }
 
 export const GlobalStyle = createGlobalStyle`
-  html, body {
+  html, body, #react-app {
     margin: 0;
     padding: 0;
     font-size: ${(p: { theme: MarriotTheme }) => p.theme.fontSizes.small};
