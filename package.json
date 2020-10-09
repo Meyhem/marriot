@@ -5,9 +5,10 @@
   "license": "MIT",
   "scripts": {
     "start": "parcel src/index.html",
-    "build": "parcel build src/index.html --public-url https://meyhem.github.io/marriot/docs",
-    "release-gh": "yarn run build && shx mkdir -p ./docs && shx cp ./dist/* ./docs",
-    "clean": "shx rm -rf ./.cache ./dist",
+    "build": "yarn run build-less && parcel build src/index.html --public-url https://meyhem.github.io/marriot/docs",
+    "build-less": "lessc --js ./src/lib.less ./src/lib.css",
+    "release-gh": "yarn run clean && yarn run build && shx mkdir -p ./docs && shx cp ./dist/* ./docs",
+    "clean": "shx rm -rf ./.cache ./dist ./docs",
     "mrproper": "yarn run clean && shx rm -rf node_modules"
   },
   "dependencies": {
@@ -30,6 +31,7 @@
     "@types/styled-components": "^5.1.3",
     "@types/styled-system": "^5.1.10",
     "babel-core": "^6.26.3",
+    "less": "^3.12.2",
     "parcel-bundler": "^1.12.4",
     "shx": "^0.3.2",
     "typescript": "^4.0.3"

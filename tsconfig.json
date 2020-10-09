@@ -3,6 +3,6 @@
     "allowSyntheticDefaultImports": true,
     "esModuleInterop": true,
     "jsx": "react",
-    "lib": ["ES6"]
+    "lib": ["ES6", "DOM"]
   }
 }

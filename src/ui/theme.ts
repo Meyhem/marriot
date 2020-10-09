@@ -35,7 +35,7 @@ export type Breakpoints = 0 | 1 | 2
 
 export const defaultTheme: MarriotTheme = {
   colors: {
-    primary: '#0557b0;',
+    primary: '#0557b0',
     secondary: '#fec74a',
 
     info: '#17a2b8',
